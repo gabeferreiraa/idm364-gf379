@@ -1,4 +1,8 @@
-<script lang="js">
+<script>
+	import { cart } from '$lib/cartStore';
+
+	// Compute total cart items dynamically
+	$: totalItems = $cart.reduce((total, item) => total + item.quantity, 0);
 </script>
 
 <header class="bg-white p-4 shadow-md">
@@ -36,12 +40,14 @@
 						d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-4-8m14 8a2 2 0 100 4 2 2 0 000-4zm-10 0a2 2 0 100 4 2 2 0 000-4z"
 					/>
 				</svg>
-				<!-- Cart Count Badge -->
-				<span
-					class="absolute right-0 top-0 rounded-full bg-red-500 px-1 text-xs font-bold text-white"
-				>
-					0
-				</span>
+
+				{#if totalItems > 0}
+					<span
+						class="absolute right-0 top-0 rounded-full bg-red-500 px-1 text-xs font-bold text-white"
+					>
+						{totalItems}
+					</span>
+				{/if}
 			</a>
 		</div>
 	</div>
