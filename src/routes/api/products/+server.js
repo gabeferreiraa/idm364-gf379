@@ -1,12 +1,11 @@
 import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = 'https://fnaahxaalcvdeddcfpae.supabase.co';
-const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY; // Use env variable for security
+const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 export async function GET() {
 	try {
-		// Replace 'your_table_name' with the actual table name
 		const { data, error } = await supabase.from('products').select('*');
 
 		if (error) throw error;

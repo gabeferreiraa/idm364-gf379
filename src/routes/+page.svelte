@@ -1,25 +1,37 @@
 <script>
 	import Card from '$lib/Card.svelte';
+
 	const { data } = $props();
 </script>
 
 <div class="min-h-screen bg-gradient-to-b from-blue-100 to-white">
 	<!-- Hero Section -->
-	<div class="mx-auto flex max-w-6xl flex-col items-center px-6 py-20 text-center">
-		<h1 class="text-5xl font-extrabold text-gray-900">Welcome to Our Store</h1>
-		<p class="mt-4 max-w-2xl text-xl text-gray-700">
-			Discover the best deals and exclusive collections, crafted just for you.
-		</p>
-		<button
-			class="mt-6 rounded-lg bg-blue-600 px-6 py-3 text-lg font-semibold text-white shadow-lg hover:bg-blue-700"
-		>
-			Shop Now
-		</button>
+	<div class="relative h-[80vh] w-full overflow-hidden">
 		<img
-			src="https://source.unsplash.com/featured/800x400"
-			alt="Placeholder Image"
-			class="mt-10 w-full max-w-3xl rounded-lg shadow-lg"
+			src="images/hero-image.jpg"
+			alt="Hero Image"
+			class="absolute inset-0 h-full w-full object-cover"
 		/>
+
+		<!-- Overlay for darker text contrast (optional) -->
+		<div class="absolute inset-0 bg-black bg-opacity-30"></div>
+
+		<!-- Text Content on top of the image -->
+		<div
+			class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white"
+		>
+			<h1 class="text-6xl font-extrabold">Welcome to Our Store</h1>
+			<p class="mt-4 max-w-2xl text-2xl">
+				Discover the best deals and exclusive collections, crafted just for you.
+			</p>
+			<a href="/products">
+				<button
+					class="mt-8 rounded-lg bg-blue-600 px-8 py-4 text-xl font-semibold text-white shadow-lg hover:bg-blue-700"
+				>
+					Shop Now
+				</button>
+			</a>
+		</div>
 	</div>
 
 	<div class="mx-auto max-w-6xl px-6 py-12">

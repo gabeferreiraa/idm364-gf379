@@ -1,5 +1,5 @@
 <script>
-	import { cart, removeFromCart, updateQuantity } from '$lib/cartStore';
+	import { cart, removeFromCart, updateQuantity, clearCart, handleCheckout } from '$lib/cartStore';
 
 	// Function to calculate the total price
 	$: totalPrice = $cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
@@ -35,14 +35,14 @@
 			{/each}
 		</ul>
 
-		<!-- Total Price -->
 		<p class="mt-6 text-xl font-bold text-gray-900">Total: ${totalPrice}</p>
-
-		<!-- Checkout Button -->
-		<button
-			class="mt-6 w-full rounded-md bg-blue-600 py-3 text-lg font-semibold text-white hover:bg-blue-700"
-		>
-			Proceed to Checkout
-		</button>
+		<a href="/order-confirmation">
+			<button
+				on:click={handleCheckout}
+				class="mt-6 w-full rounded-md bg-blue-600 py-3 text-lg font-semibold text-white hover:bg-blue-700"
+			>
+				Proceed to Checkout
+			</button>
+		</a>
 	{/if}
 </div>

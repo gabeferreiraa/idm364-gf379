@@ -11,8 +11,4 @@
 	});
 </script>
 
-<h1>api page</h1>
-
-{#if products}
-	<p>{products}</p>
-{/if}
+<h1>API page</h1>

@@ -4,7 +4,7 @@
 	<div class="mx-auto flex max-w-6xl items-center justify-between">
 		<!-- Footer Branding -->
 		<div class="text-2xl font-bold text-gray-900">
-			<a href="/">E-Shop</a>
+			<a href="/">Swift Cart</a>
 		</div>
 
 		<!-- Social Media Links -->
