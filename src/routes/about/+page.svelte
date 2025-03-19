@@ -1,7 +1,11 @@
 <div class="mx-auto max-w-5xl space-y-16 p-6 text-gray-800">
 	<section class="  ">
 		<div class="relative overflow-hidden rounded-lg shadow-lg">
-			<img src="/images/mission.jpg" alt="Our mission in action" class="h-96 w-full object-cover" />
+			<img
+				src="/images/mission.webp"
+				alt="Our mission in action"
+				class="h-96 w-full object-cover"
+			/>
 			<div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
 				<h2 class="text-4xl font-bold text-white">Our Mission</h2>
 			</div>
@@ -15,7 +19,7 @@
 
 	<section>
 		<div class="relative overflow-hidden rounded-lg shadow-lg">
-			<img src="/images/team-photo.jpg" alt="Our team" class="h-96 w-full object-cover" />
+			<img src="/images/team-photo.webp" alt="Our team" class="h-96 w-full object-cover" />
 			<div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
 				<h2 class="text-4xl font-bold text-white">Our Team</h2>
 			</div>

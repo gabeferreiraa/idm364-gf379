@@ -7,7 +7,7 @@
 
 <div class="flex min-h-screen flex-col">
 	<Header />
-	<main class="mt-16 flex-grow px-4">
+	<main class=" flex-grow">
 		{@render children?.()}
 	</main>
 	<Footer />
