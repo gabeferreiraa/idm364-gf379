@@ -24,8 +24,8 @@
 						<p class="mt-1 text-gray-700">Quantity: {item.quantity}</p>
 					</div>
 				</div>
-				<a href="/products" class="mt-6 block text-blue-600 hover:underline">← Continue shopping</a>
 			{/each}
+			<a href="/products" class="mt-6 block text-blue-600 hover:underline">← Continue shopping</a>
 		</div>
 	{:else}
 		<p class="mt-8 text-gray-600">No recent order found.</p>

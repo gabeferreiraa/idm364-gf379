@@ -1,27 +1,28 @@
-import { writable } from 'svelte/store';
+import { writable, get } from 'svelte/store';
 
 // Initialize the cart store
 export const cart = writable([]);
 
-// Function to remove an item from the cart
+// Remove an item from the cart
 export function removeFromCart(id) {
 	cart.update((items) => items.filter((item) => item.id !== id));
 }
 
-// Function to update item quantity
+// Update item quantity
 export function updateQuantity(id, quantity) {
 	cart.update((items) => {
 		return items.map((item) => (item.id === id ? { ...item, quantity } : item));
 	});
 }
 
+// Clear the cart
 export function clearCart() {
 	cart.set([]);
 }
+
+// Handle checkout
 export function handleCheckout() {
-	// Save cart snapshot for confirmation page
-	localStorage.setItem('recentOrder', JSON.stringify($cart));
-	// Now clear the cart
+	const currentCart = get(cart); // ✅ Correct store access
+	localStorage.setItem('recentOrder', JSON.stringify(currentCart));
 	clearCart();
-	// Navigate to confirmation (the <a> handles it)
 }
