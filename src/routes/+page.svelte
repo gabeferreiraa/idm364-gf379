@@ -8,15 +8,13 @@
 	<!-- Hero Section -->
 	<div class="relative h-[80vh] w-full overflow-hidden">
 		<img
-			src="images/hero-image.jpg"
+			src="images/hero-image.webp"
 			alt="Hero Image"
 			class="absolute inset-0 h-full w-full object-cover"
 		/>
 
-		<!-- Overlay for darker text contrast (optional) -->
 		<div class="absolute inset-0 bg-black bg-opacity-30"></div>
 
-		<!-- Text Content on top of the image -->
 		<div
 			class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white"
 		>
