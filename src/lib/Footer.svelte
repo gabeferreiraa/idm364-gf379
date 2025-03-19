@@ -1,6 +1,6 @@
 <script lang="js"></script>
 
-<footer class="bg-white p-4 shadow-md">
+<footer class="mt-16 bg-white p-4 shadow-md">
 	<div class="mx-auto flex max-w-6xl items-center justify-between">
 		<div class="text-2xl font-bold text-gray-900">
 			<a href="/">Swift Cart</a>

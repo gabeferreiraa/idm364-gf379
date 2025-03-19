@@ -10,8 +10,8 @@
 	<div
 		class="max-w-sm cursor-pointer overflow-hidden rounded-lg border border-gray-200 bg-white shadow-md transition-shadow duration-300 hover:shadow-lg"
 	>
-		<div class="aspect-[4/3] w-full overflow-hidden">
-			<img class="h-full w-full object-contain" src={img} alt={name} />
+		<div class="aspect-[4/3] w-full overflow-hidden bg-gray-100">
+			<img class="block h-full w-full object-cover" src={img} alt={name} />
 		</div>
 		<div class="p-6">
 			<h2 class="mb-2 text-xl font-semibold text-gray-800">{name}</h2>

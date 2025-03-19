@@ -4,14 +4,13 @@
 </script>
 
 <div class=" min-h-screen w-full">
-	<!-- Hero Full Width -->
 	<div class="relative h-[80vh] w-full overflow-hidden">
 		<img
 			src="images/hero-image.webp"
 			alt="Hero Image"
 			class="absolute inset-0 h-full w-full object-cover"
 		/>
-		<!-- Darker Overlay -->
+
 		<div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
 		<!-- Hero Content -->

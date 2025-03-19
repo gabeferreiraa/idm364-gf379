@@ -2,6 +2,8 @@
 	import { onMount } from 'svelte';
 	let recentOrder = [];
 	let orderNumber = '';
+	let visible = false;
+	let message = '';
 
 	onMount(() => {
 		const storedOrder = localStorage.getItem('recentOrder');
