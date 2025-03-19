@@ -3,7 +3,7 @@
 	const { data } = $props();
 </script>
 
-<div class="min-h-screen w-full">
+<div class=" min-h-screen w-full">
 	<!-- Hero Full Width -->
 	<div class="relative h-[80vh] w-full overflow-hidden">
 		<img
