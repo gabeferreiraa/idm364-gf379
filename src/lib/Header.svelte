@@ -1,8 +1,8 @@
 <script>
 	import { cart } from '$lib/cartStore';
+	import { page } from '$app/stores';
 
 	let menuOpen = false;
-
 	$: totalItems = $cart.reduce((total, item) => total + item.quantity, 0);
 </script>
 
@@ -17,7 +17,6 @@
 				aria-label="Toggle menu"
 			>
 				{#if menuOpen}
-					<!-- X Icon -->
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-6 w-6"
@@ -33,7 +32,6 @@
 						/>
 					</svg>
 				{:else}
-					<!-- Hamburger Icon -->
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-6 w-6"
@@ -59,9 +57,21 @@
 
 		<!-- Desktop Nav -->
 		<nav class="hidden space-x-6 md:flex">
-			<a href="/" class="text-gray-600 transition hover:text-gray-900">Home</a>
-			<a href="/products" class="text-gray-600 transition hover:text-gray-900">Products</a>
-			<a href="/about" class="text-gray-600 transition hover:text-gray-900">About Us</a>
+			<a
+				href="/"
+				class={`transition hover:text-gray-900 ${$page.url.pathname === '/' ? 'font-semibold text-blue-600' : 'text-gray-600'}`}
+				>Home</a
+			>
+			<a
+				href="/products"
+				class={`transition hover:text-gray-900 ${$page.url.pathname === '/products' ? 'font-semibold text-blue-600' : 'text-gray-600'}`}
+				>Products</a
+			>
+			<a
+				href="/about"
+				class={`transition hover:text-gray-900 ${$page.url.pathname === '/about' ? 'font-semibold text-blue-600' : 'text-gray-600'}`}
+				>About Us</a
+			>
 		</nav>
 
 		<!-- Cart Icon -->
@@ -98,9 +108,21 @@
 	<!-- Mobile Nav -->
 	{#if menuOpen}
 		<nav class="mt-4 flex flex-col space-y-4 md:hidden">
-			<a href="/" class="text-gray-600 transition hover:text-gray-900">Home</a>
-			<a href="/products" class="text-gray-600 transition hover:text-gray-900">Products</a>
-			<a href="/about" class="text-gray-600 transition hover:text-gray-900">About Us</a>
+			<a
+				href="/"
+				class={`transition hover:text-gray-900 ${$page.url.pathname === '/' ? 'font-semibold text-blue-600' : 'text-gray-600'}`}
+				>Home</a
+			>
+			<a
+				href="/products"
+				class={`transition hover:text-gray-900 ${$page.url.pathname === '/products' ? 'font-semibold text-blue-600' : 'text-gray-600'}`}
+				>Products</a
+			>
+			<a
+				href="/about"
+				class={`transition hover:text-gray-900 ${$page.url.pathname === '/about' ? 'font-semibold text-blue-600' : 'text-gray-600'}`}
+				>About Us</a
+			>
 		</nav>
 	{/if}
 </header>
