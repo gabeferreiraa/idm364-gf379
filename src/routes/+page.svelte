@@ -17,7 +17,7 @@
 		<div
 			class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white"
 		>
-			<h1 class="text-6xl font-extrabold">Welcome to Our Store</h1>
+			<h1 class="text-6xl font-extrabold">Welcome to Swift Cart!</h1>
 			<p class="mt-4 max-w-2xl text-2xl">
 				Discover the best deals and exclusive collections, crafted just for you.
 			</p>
